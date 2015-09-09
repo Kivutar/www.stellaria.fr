@@ -6,7 +6,7 @@ if (isset($_POST["inputName"]) && isset($_POST["inputEmail"]) && isset($_POST["i
         $name = htmlspecialchars($_POST["inputName"]);
         $address = htmlspecialchars($_POST["inputEmail"]);
         $message = htmlspecialchars($_POST["inputMessage"]);
-        $thx = mail("jean.andre.santoni@gmail.com", "Message from $name", $message, "From:$address");
+        $thx = mail("jean.andre.santoni@gmail.com", "[Stellaria] Message from $name", $message, "From:$address");
 }
 
 ?>
@@ -187,7 +187,7 @@ if (isset($_POST["inputName"]) && isset($_POST["inputEmail"]) && isset($_POST["i
 
     <div class="container-narrow">
       <div class="footer">
-        <p>&copy; Jean-André Santoni 2013</p>
+        <p>&copy; Jean-André Santoni 201-2015</p>
       </div>
     </div>
 
@@ -204,5 +204,16 @@ if (isset($_POST["inputName"]) && isset($_POST["inputEmail"]) && isset($_POST["i
     <script src="bootstrap/js/bootstrap-collapse.js"></script>
     <script src="bootstrap/js/bootstrap-carousel.js"></script>
     <script src="bootstrap/js/bootstrap-typeahead.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-50454475-1', 'stellaria.fr');
+      ga('send', 'pageview');
+    
+    </script>
   </body>
 </html>
