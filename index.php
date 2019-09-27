@@ -17,41 +17,62 @@ if (isset($_POST["inputName"]) && isset($_POST["inputEmail"]) && isset($_POST["i
     <meta charset="utf-8">
     <title>Stellaria</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Stellaria is a natal chart drawing tool for astrologers.<br/>It aims to be beautiful, accurate and easy to use.">
+    <meta name="description" content="Stellaria is an astrology app for iPhone and iPad. It aims to be beautiful, accurate and easy to use.">
+    <meta name="keywords" content="stellaria,astrology,natal char,app,ios,iphone,ipad,vector graphics,accurate,swiss ephemeris">
     <meta name="author" content="Jean-André Santoni">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="www.stellaria.fr">
+    <meta name="twitter:title" content="Stellaria">
+    <meta name="twitter:description" content="Stellaria is an astrology app for iPhone and iPad. It aims to be beautiful, accurate and easy to use.">
+    <meta name="twitter:creator" content="Jean-André Santoni">
+    <meta name="twitter:image" content="http://www.stellaria.fr/stellaria-astrology-app-for-iphone-and-ipad.jpg">
+    
+    <meta property="og:title" content="Stellaria" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.stellaria.fr/" />
+    <meta property="og:image" content="http://www.stellaria.fr/stellaria-astrology-app-for-iphone-and-ipad.jpg" />
+    <meta property="og:description" content="Stellaria is an astrology app for iPhone and iPad. It aims to be beautiful, accurate and easy to use." />
+    <meta property="og:site_name" content="Stellaria" />
+    <meta property="fb:admins" content="kivutaro" /> 
+
     <style type="text/css">
       body {
         padding-bottom: 40px;
       }
 
-      /* Custom container */
-      .container-narrow {
-        margin: 0 auto;
-        max-width: 768px;
-      }
-
       /* Main marketing message and sign up button */
       .jumbotron {
-        margin: 30px 0 60px 0;
-        padding: 40px 0;
+        margin: 20px 0 60px 0;
+        padding: 100px 0;
         text-align: left;
-        background: #5855d6 50% 50%;
+        background: #15263b 50% 50% url("bg.jpg");
         color: #fff;
-        text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
         -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
         -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
         box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
       }
       
       .jumbotron h1 {
-        font-size: 72px;
+        font-size: 68px;
         line-height: 1;
+        text-shadow: 0 1px 3px rgba(0,0,0,.5), 0 0 30px rgba(0,0,0,.75); 
+      }
+      .jumbotron h2 {
+        margin: 40px 0;
+        text-shadow: 0 1px 3px rgba(0,0,0,.5), 0 0 30px rgba(0,0,0,.75); 
       }
       .jumbotron .btn {
         font-size: 21px;
         padding: 14px 24px;
+      }
+
+      .ios {
+        height: 800px;
+        background: url("stellaria-astrology-app-for-iphone-and-ipad.jpg");
+        background-size: 100%;
       }
 
       .example {
@@ -67,9 +88,6 @@ if (isset($_POST["inputName"]) && isset($_POST["inputEmail"]) && isset($_POST["i
 
       .marketing {
         margin: 0 0 60px 0;
-      }
-      .marketing p + h4 {
-        margin-top: 28px;
       }
       .footer {
         padding-top: 30px;
@@ -92,7 +110,7 @@ if (isset($_POST["inputName"]) && isset($_POST["inputEmail"]) && isset($_POST["i
 
   <body>
 
-    <div class="container-narrow">
+    <div class="container">
 
       <div class="header">
         <ul class="nav nav-pills pull-right">
@@ -106,14 +124,14 @@ if (isset($_POST["inputName"]) && isset($_POST["inputEmail"]) && isset($_POST["i
     </div>
 
     <div class="jumbotron">
-      <div class="container-narrow">
+      <div class="container">
         <h1>Now available on iPad and iPhone!</h1>
-        <p>Stellaria is a natal chart drawing tool for astrologers.<br/>It aims to be beautiful, accurate and easy to use.</p>
+        <h2>Stellaria is a natal chart drawing app for astrologers.<br/>It aims to be beautiful, accurate and easy to use.</h2>
         <a class="btn btn-large btn-default" href="https://itunes.apple.com/us/app/stellaria/id710885722"><i class="icon-arrow-right"></i> App Store</a>
       </div>
     </div>
 
-    <div class="container-narrow">
+    <div class="container">
 
       <?php
 
@@ -123,40 +141,52 @@ if (isset($_POST["inputName"]) && isset($_POST["inputEmail"]) && isset($_POST["i
 
       ?>
 
-      <h3 class="text-muted"><a id="about"></a>Features</h3>
+      <a id="about"></a>
 
       <div class="row marketing">
         <div class="col-lg-6">
-          <h4>Neat</h4>
-          <p>The charts are drawn using vector graphics, the result looks nice at any resolution.</p>
-
-          <h4>Accurate</h4>
-          <p>Based on the famous Swiss Ephemeris for very accurate astronomical computation.</p>
-
-          <h4>Social</h4>
-          <p>Share your chart on Facebook or Twitter, or send it in email.</p>
+          <h3 class="text-muted">Neat</h3>
+          <p>The charts are drawn using vector graphics, the resulting chart can scale and look nice at any resolution.</p>
         </div>
 
         <div class="col-lg-6">
-          <h4>Easy</h4>
-          <p>Can look for cities and timezones in a large database. It also automatically compute daylight saving time.</p>
+          <h3 class="text-muted">Accurate</h3>
+          <p>Stellaria foundations are the famous Swiss Ephemeris for very accurate astronomical computation.</p>
+        </div>
 
-          <h4>Full featured</h4>
-          <p>Is able to display 25 different celestial bodies, and 15 house systems.</p>
+        <div class="col-lg-6">
+          <h3 class="text-muted">Social</h3>
+          <p>You can share the generated chart on Facebook or Twitter, or send it by email in PDF format.</p>
+        </div>
 
-          <h4>Printing</h4>
+        <div class="col-lg-6">
+          <h3 class="text-muted">Easy</h3>
+          <p>The app can look for cities and timezones in a large database. It also automatically compute daylight saving time.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h3 class="text-muted">Full featured</h3>
+          <p>Stellaria is configurable, and is able to display up to 25 different celestial bodies and 15 house systems.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h3 class="text-muted">Printing</h3>
           <p>You can print your charts directly from the device, or export them as PDF for later printing.</p>
         </div>
       </div>
 
     </div>
 
+    <div class="ios">
+
+    </div>
+
     <div class="example">
-      <div class="container-narrow">
+      <div class="container">
 
         <h3 class="text-muted"><a id="contact"></a>Get in touch</h3>
         
-        <form class="form-horizontal" role="form" method="POST" action="">
+        <form class="form-horizontal" method="POST" action="/">
           <div class="form-group">
             <label for="inputName" class="col-sm-2 control-label">Name</label>
             <div class="col-sm-10">
@@ -185,9 +215,9 @@ if (isset($_POST["inputName"]) && isset($_POST["inputEmail"]) && isset($_POST["i
       </div>
     </div>
 
-    <div class="container-narrow">
+    <div class="container">
       <div class="footer">
-        <p>&copy; Jean-André Santoni 201-2015</p>
+        <p>&copy; Jean-André Santoni 2013-2016</p>
       </div>
     </div>
 
